@@ -4,6 +4,7 @@ var express = require('express'),
 const MongoClient = require('mongodb').MongoClient;
 var urlString = 'mongodb+srv://chanda:roy@croycluster0-k3irh.gcp.mongodb.net/CROY_DB?retryWrites=true&w=majority';
 var mongoose = require('mongoose');
+var path = require('path');
 MongoClient.connect(urlString, function(err, client) {
    if(err) {
         console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
@@ -19,9 +20,6 @@ app.get('/', function (req, res) {
   res.sendfile(__dirname + '/dist/index.html');
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
-});
 
 app.use('/', express.static(__dirname + '/dist'));
 
