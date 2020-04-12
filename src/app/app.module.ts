@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+ import { EditorModule } from '@tinymce/tinymce-angular';
+
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.route';
@@ -11,6 +13,10 @@ import { AppRoutingModule } from './app.route';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { TopicsComponent } from './topics/topic.component';
+
+//Admin
+import { CreateTopicComponent } from './Admin/createTopic/createTopic.component';
+import { CreateSubjectComponent } from './Admin/createSubject/createSubject.component';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
@@ -20,7 +26,9 @@ import { SharedModule } from './shared/shared.module';
     AppComponent,
     HomeComponent,
     ContactComponent,
-    TopicsComponent
+    TopicsComponent,
+    CreateTopicComponent,
+    CreateSubjectComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,8 @@ import { SharedModule } from './shared/shared.module';
     ReactiveFormsModule,
     CoreModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
