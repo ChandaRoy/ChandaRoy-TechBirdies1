@@ -34,7 +34,7 @@
     "mongoose": "^4.x.x",
     "path": "^0.12.7",
     "rxjs": "^6.1.0",
-    "shelljs": "^0.8.3",
+    "shelljs": "^0.8.5",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
